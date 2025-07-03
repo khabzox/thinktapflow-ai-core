@@ -1,0 +1,67 @@
+{
+  "name": "@thinktapflow/ai-core",
+  "version": "1.0.0",
+  "description": "Advanced AI content generation library with multi-provider support, streaming, caching, and intelligent optimization",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "ai",
+    "openai",
+    "groq",
+    "anthropic",
+    "thinktapflow",
+    "content-generation",
+    "streaming",
+    "typescript",
+    "multi-provider",
+    "caching",
+    "rate-limiting"
+  ],
+  "author": "Abdelkabir <abdelkabir.ouadoukou@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khabzox/thinktapflow-ai-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khabzox/thinktapflow-ai-core/issues"
+  },
+  "homepage": "https://github.com/khabzox/thinktapflow-ai-core#readme",
+  "dependencies": {
+    "groq-sdk": "^0.3.0",
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.40.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
